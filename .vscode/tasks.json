@@ -1,0 +1,21 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "windows":{
+                "command": "${workspaceFolder}/Tools/nodejs_bin/node.exe make.js"
+            },
+            "linux":{
+                "command": "${workspaceFolder}/Tools/node-linux64 make.js"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
